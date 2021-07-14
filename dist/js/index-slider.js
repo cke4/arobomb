@@ -171,3 +171,54 @@ document.addEventListener(`scroll`, function () {
         mainMenuIndex.classList.add(`fixed-menu-transparent-bg`)
     }
 })
+$('.closeGreen').click(function () {
+    $(".wrapper").css("display", "none")
+})
+
+$('.close').click(function () {
+    $(".modalCombo").css("display", "none")
+    $(".main-menu").css("z-index", "20")
+})
+$('.greenDiv').click(function () {
+    $(".modalCombo").css("display", "flex")
+    $(".main-menu").css("z-index", "0")
+})
+
+$('.closeGreenMobile').click(function () {
+    $(".greenDivWrapperMobile").css("display", "none")
+})
+
+$('#greenMenuItem').click(function () {
+    $(".modalComboMobile").css("display", "flex");
+    $(".index__video-mobile-btn").css("display", "none")
+    $(".main-menu__wrapper--mob-active").css("display", "none")
+})
+
+
+$('.closeMobile').click(function () {
+    $(".modalComboMobile").css("display", "none")
+    $(".index__video-mobile-btn").css("display", "flex")
+    $(".main-menu__wrapper--mob-active").css("display", "flex")
+})
+
+$('.phone-field').inputmask("+7(999)999-9999");
+
+jQuery.validator.addMethod("checkMaskPhone", function(value, element) {
+    return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
+});
+
+lottie.loadAnimation({
+    container: document.getElementById('greenCircle'),
+    renderer : 'svg',
+    loop     : true,
+    autoplay : true,
+    path     : '../js/green.json'
+});
+
+const mediaQuery = window.matchMedia('(min-width: 768px)')
+if (mediaQuery.matches) {
+    setTimeout(function() {
+        document.getElementById('greenWrapper').style.display = 'flex';
+        document.getElementById('greenWrapper').style.opacity = 1;
+    }, 3000);
+}
