@@ -178,10 +178,15 @@ $('.closeGreen').click(function () {
 $('.close').click(function () {
     $(".modalCombo").css("display", "none")
     $(".main-menu").css("z-index", "20")
+    $(".index__slider").css("z-index", "2")
+    $(".index__static").css("z-index", "2")
 })
 $('.greenDiv').click(function () {
     $(".modalCombo").css("display", "flex")
     $(".main-menu").css("z-index", "0")
+    $(".index__slider").css("z-index", "-2")
+    $(".index__static").css("z-index", "-2")
+
 })
 
 $('.closeGreenMobile').click(function () {

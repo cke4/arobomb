@@ -20,9 +20,17 @@ let navIcon = mainMenu.querySelector('.' + mobileBtnCls)
 let menuWrapMob = mainMenu.querySelector('.' + menuWrapCls)
 navIcon.addEventListener('click', function(){
     this.classList.toggle('open')
+        {
+            $(".modalComboMobile").css("display", "none")
+            $(".index__video-mobile-btn").css("display", "flex")
+            $(".main-menu__wrapper--mob-active").css("display", "flex")
+        }
+
     menuWrapMob.classList.toggle(menuWrapCls + '--mob-active')
 
-})
+}
+)
+
 
 let giftbtn = mainMenu.querySelector('.' + giftBtnCls)
 giftbtn.addEventListener('click', function(){
