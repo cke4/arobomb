@@ -131,12 +131,13 @@
   bottom: 0
   width: 100%
   @include media("<tablet")
-    position: fixed
-    width: 100%!important
+    width: 103%!important
     margin-left: -10px
     background: #82AD24!important
     opacity: 1!important
     font-size: 14px
+
+
 
 
 .modalCombo
@@ -508,6 +509,7 @@
   background-repeat: no-repeat
   background-size: contain
   background-position: unset
+  background-position-y: -10%
 
 
 .modalLeftNewPrice
@@ -582,11 +584,15 @@
   letter-spacing: 2px
   @include media("<tablet")
     width: 97%
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    font-size: 12px
 
 
 .custom-checkbox + label
   @include media("<tablet")
-    font-size: 14px
+    font-size: 12px
 
 .form-row
   margin-top: 15px
