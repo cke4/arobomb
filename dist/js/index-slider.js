@@ -227,3 +227,9 @@ if (mediaQuery.matches) {
         document.getElementById('greenWrapper').style.opacity = 1;
     }, 3000);
 }
+
+$('#modalButton').click(function () {
+    $(".modalCombo").css("display", "none");
+    $(".modalComboMobile").css("display", "none");
+
+})

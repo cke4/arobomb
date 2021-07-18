@@ -1603,11 +1603,11 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
 
 .modalCombo {
   z-index: 22;
-  width: 100%;
+  width: 1440px;
+  right: 10%;
   height: 900px;
   position: absolute;
   top: 0px;
-  right: 0px;
   background: #F5F8FF;
   background-image: url("../img/png/iStock-918139308 3.png");
   background-position: right;
@@ -1968,9 +1968,10 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   padding-top: 40px;
   z-index: 122;
   height: 1160px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
   background: url(../img/png/iPhone11.jpg);
   background-repeat: no-repeat;
-  overflow-y: scroll;
   background-size: contain;
   background-position: unset; }
 
@@ -2097,6 +2098,18 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
 @media (min-width: 1000px) and (max-width: 1300px) {
   .modalCombo {
     zoom: 88%; } }
+
+@media (min-width: 1400px) and (max-width: 1499px) {
+  .modalCombo {
+    right: 0%; }
+  .wrapper {
+    right: 0%; } }
+
+@media (min-width: 1500px) and (max-width: 1840px) {
+  .modalCombo {
+    right: 5%; }
+  .wrapper {
+    right: 3%; } }
 
 @media (min-width: 820px) and (max-width: 999px) {
   .modalCombo {
