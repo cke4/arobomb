@@ -1584,7 +1584,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   width: 100%;
   height: 100%;
   position: fixed;
-  top: 8%;
+  top: 0%;
   right: 0px;
   background: #F5F8FF; }
 
@@ -1966,14 +1966,14 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   padding-left: 10px;
   padding-top: 40px;
   z-index: 122;
-  height: 1160px;
+  height: 1100px;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   background: url(../img/png/iPhone11.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: unset;
-  background-position-y: -10%; }
+  background-position-y: -43%; }
 
 .modalLeftNewPrice {
   font-weight: 900;
@@ -2097,11 +2097,18 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       width: 100%;
       margin-left: -10px; } }
 
-@media (min-width: 300px) and (max-width: 380px) {
+@media (min-width: 300px) and (max-width: 370px) {
   .custom-checkbox + label {
     font-size: 12px; }
   .modalLeftFormTextHeadMobile {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .postcard input {
+    font-size: 8px; }
+  .modalRightUp {
+    right: 10%; }
+  .modalSixMobile {
+    background-size: cover;
+    background-position-x: 55%; } }
 
 @media (min-width: 1000px) and (max-width: 1399px) {
   .modalCombo {

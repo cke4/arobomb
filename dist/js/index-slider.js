@@ -217,7 +217,7 @@ lottie.loadAnimation({
     renderer : 'svg',
     loop     : true,
     autoplay : true,
-    path     : '../dist/js/green.json'
+    path     : '../js/green.json'
 });
 
 const mediaQuery = window.matchMedia('(min-width: 768px)')
