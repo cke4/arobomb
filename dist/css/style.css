@@ -1499,6 +1499,9 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     .greenDivWrapperMobile {
       display: flex; } }
 
+#greenCircle > svg > g {
+  cursor: pointer; }
+
 .greenDiv span {
   font-weight: 900; }
 
@@ -2096,6 +2099,18 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     .form-row button {
       width: 100%;
       margin-left: -10px; } }
+
+@media (min-height: 550px) and (max-height: 600px) {
+  .modalCombo {
+    height: 645px; }
+  .modalLeft {
+    margin-top: 1%; } }
+
+@media (min-height: 601px) and (max-height: 740px) {
+  .modalCombo {
+    height: 763px; }
+  .modalLeft {
+    margin-top: 2%; } }
 
 @media (min-width: 300px) and (max-width: 370px) {
   .custom-checkbox + label {
