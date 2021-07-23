@@ -2102,13 +2102,17 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
 
 @media (min-height: 550px) and (max-height: 600px) {
   .modalCombo {
-    height: 645px; }
+    height: 663px;
+    zoom: 84%;
+    right: 0%;
+    width: 100%; }
   .modalLeft {
     margin-top: 1%; } }
 
 @media (min-height: 601px) and (max-height: 740px) {
   .modalCombo {
-    height: 763px; }
+    height: 763px;
+    width: 100%; }
   .modalLeft {
     margin-top: 2%; } }
 
