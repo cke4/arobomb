@@ -258,3 +258,10 @@ function getCookie(name) {
     }
     return null;
 }
+
+$('#agree').on('click', function () {
+    if ( $(this).is(':checked') ) {
+    } else {
+        $("#formDeks :input").prop('readonly', true);
+    }
+})
