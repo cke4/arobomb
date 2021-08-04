@@ -182,7 +182,7 @@
   bottom: 14%
   right: 18%
   @include media("<tablet")
-   bottom: 0%
+   bottom: 0%!important
    left: 5%
    z-index: 999
    width: 87%
@@ -514,6 +514,10 @@
   background-size: contain
   background-position: unset
   background-position-y: -80%
+  @include media("<tablet")
+     .modalRightUp
+         background-size: 85%
+         bottom: 5%
 
 
 
@@ -635,7 +639,7 @@
     margin-left: -10px
 
 
-@media (min-height: 550px) and (max-height: 600px)
+@media (min-height: 750px) and (max-height: 800px)
   .modalCombo
     height: 663px
     zoom: 84%
@@ -650,6 +654,7 @@
   .modalRightIcons
     bottom: 19%
     right: 15%
+
 
 
 @media (min-height: 601px) and (max-height: 700px)
@@ -713,6 +718,8 @@
   .modalSixMobile
     background-size: cover
     background-position-x: 55%
+  .ComboMobileWrap
+    background-position-y: 0%
 
 @media (min-width: 1000px) and (max-width: 1399px)
   .modalCombo
