@@ -1889,6 +1889,9 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   display: flex;
   background-size: 150%;
   z-index: 2; }
+  @media (max-width: 767px) {
+    .modalSixMobile {
+      background-size: 135%; } }
 
 .modalSixTextMobile {
   display: flex;
