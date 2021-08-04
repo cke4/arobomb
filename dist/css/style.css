@@ -1641,7 +1641,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   flex-direction: row;
   position: absolute;
   bottom: 14%;
-  right: 18%; }
+  right: 18%;
+  z-index: 10; }
   @media (max-width: 767px) {
     .modalRightIcons {
       bottom: 0% !important;
@@ -1886,7 +1887,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   width: 100%;
   height: 100px;
   display: flex;
-  background-size: 150%; }
+  background-size: 150%;
+  z-index: 2; }
 
 .modalSixTextMobile {
   display: flex;
