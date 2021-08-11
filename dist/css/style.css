@@ -1995,6 +1995,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   display: flex;
   align-items: center;
   background: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+  -webkit-mask-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
   @media (max-width: 767px) {

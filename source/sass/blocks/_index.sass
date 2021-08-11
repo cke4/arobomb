@@ -499,14 +499,10 @@
   background-image: linear-gradient(175deg, transparent 50%, #FF8BDE 0%, #669FFF 57%, transparent 50%)
   background-repeat: no-repeat
   margin-right: 34px
-  -webkit-background-clip: text
-  -webkit-text-fill-color: transparent
   @include media("<tablet")
     font-size: 20px
     color: white
     background-image: linear-gradient(175deg, transparent 50%, black 0%, black 57%, transparent 50%)
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
 
 
 .ComboMobileWrap
@@ -536,8 +532,12 @@
   display: flex
   align-items: center
   background: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%)
+  -webkit-mask-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%)
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
+
+
+
   @include media("<tablet")
     background: linear-gradient(90deg, #FFF 0%, #FFF 100%)
     -webkit-background-clip: text
