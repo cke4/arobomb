@@ -14,6 +14,14 @@
 <!--    <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">-->
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.11/lottie.min.js"></script>
+
     <script src="./js/vendors.js"></script>
 </head>
 <body>
@@ -56,6 +64,9 @@
         <div class="main-menu__wrapper">
             <a href="./constructor.html" class="main-menu__get-gift-btn btn btn--gr">собрать подарок</a>
             <ul class="main-menu__list">
+                <li class="main-menu__list-item" id="greenMenuItem">
+                   ПОЛУЧИТЬ СКИДКУ <strong>50%</strong>
+                </li>
                 <li class="main-menu__list-item">
                     <a href="./catalog.html" class="main-menu__link">Магазин</a>
                 </li>
@@ -118,5 +129,137 @@
 <!--                </div>-->
             </div>
         </a>
+    </div>
+    <div class="wrapper" id="greenWrapper" >
+        <a href="#" class="closeGreen"></a>
+        <div class="greenDiv" id="greenCircle" >
+
+        </div>
+    </div>
+    <div class="modalCombo">
+        <div class="modalLeft">
+            <div class="modalLeftText">
+                <div class="modalLeftTextHead">
+                    собери свой комплект автомобильных ароматизаторов arobox
+                    <div class="modalLeftTextBox">СО СКИДКОЙ 50%</div>
+                    в подарочной упаковке
+                </div>
+                <div class="modalLeftPrice">
+                    <div class="modalLeftOldPrice">3,990₽</div>
+                    <div class="modalLeftNewPrice">1,990₽</div>
+                </div>
+                <div class="modalLeftForm">
+                    <div class="modalLeftFormText">
+                        <div class="modalLeftFormTextHead">зафиксируй скидку <strong>50%</strong> </div>
+                        <div class="modalLeftFormBody">по номеру телефона</div>
+                    </div>
+                    <form action="" class="postcard" id="formDeks">
+                        <div class="form-row">
+                            <input placeholder="ИМЯ" type="text" id="name" required>
+                        </div>
+                        <div class="form-row">
+                            <input placeholder="ТЕЛЕФОН" type="tel" id="tel" class="phone-field" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="checkbox" class="custom-checkbox" id="agree" name="agree" value="yes" checked/>
+                            <label for="agree"><p id="agreep">я согласен с политикой конфидециальости</p></label>
+                        </div>
+                        <div class="form-row">
+                            <input value="ЗАФИКСИРОВАТЬ СКИДКУ НА КОМПЛЕКТ AROBOX" id="modalButton" class="modalButton1"   type="submit"></input>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modalVector"></div>
+        <div class="modalRight">
+            <a href="#" class="close"></a>
+
+            <div class="modalRightUp">
+
+            </div>
+            <div class="modalRightIcons">
+                <div class="modalRightIcon1"></div>
+                <div class="modalRightIcon2"></div>
+                <div class="modalRightIcon3"></div>
+                <div class="modalRightIcon4"></div>
+                <div class="modalRightIcon5"></div>
+                <div class="modalRightIcon6"></div>
+                <div class="modalRightIcon7"></div>
+                <div class="modalRightIcon8"></div>
+            </div>
+            <div class="modalRightBottom">
+                <div class="modalRightText">6 ароматов + 2 сувенира на Ваш выбор!</div>
+                <div class="modalSix">
+                    <div class="modalSixText">хватает<span> ~6</span> месяцев</div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modalComboMobile" id="modal">
+        <div class="ComboMobileWrap">
+            <a href="#" class="closeMobile"></a>
+            <div class="comboMobileHead">
+                <div class="modalLeftTextHead">
+                    собери свой комплект автомобильных ароматизаторов arobox
+                    <div class="modalLeftTextBox">СО СКИДКОЙ 50%</div>
+                    в подарочной упаковке
+                </div>
+            </div>
+            <div class="modalLeftPrice">
+                <div class="modalLeftOldPrice">3,990₽</div>
+                <div class="modalLeftNewPrice">1,990₽</div>
+            </div>
+            <div class="mobilePicWrap">
+                <div class="modalRightUp">
+
+                </div>
+                <div class="modalRightIcons">
+                    <div class="modalRightIcon7"></div>
+                    <div class="modalRightIcon1"></div>
+                    <div class="modalRightIcon2"></div>
+                    <div class="modalRightIcon3"></div>
+                    <div class="modalRightIcon4"></div>
+                    <div class="modalRightIcon5"></div>
+                    <div class="modalRightIcon6"></div>
+                    <div class="modalRightIcon8"></div>
+                </div>
+            </div>
+            <div class="modalRightBottomMobile">
+                <div class="modalRightBottomMobileWrap">
+                    <div class="modalRightTextMobile">6 ароматов + 2 сувенира</div>
+                    <div class="modalRightTextMobile2">на Ваш выбор!</div>
+                </div>
+                <div class="modalSixMobile">
+                    <div class="modalSixTextMobile">хватает<span> ~6</span> месяцев</div>
+
+
+                </div>
+            </div>
+            <div class="modalLeftFormTextHeadMobileWrap">
+                <div class="modalLeftFormTextHeadMobile">зафиксируй скидку <strong>50%</strong> </div>
+                <div class="modalLeftFormBodyMobile">по номеру телефона</div>
+            </div>
+            <form action="" class="postcard">
+                <div class="form-row">
+                    <input placeholder="ИМЯ" type="text" id="name" required>
+                </div>
+                <div class="form-row">
+                    <input placeholder="ТЕЛЕФОН" type="tel" id="tel" class="phone-field" required>
+                </div>
+                <div class="form-row">
+                    <input type="checkbox" class="custom-checkbox" id="agreeM" name="agreeM" value="yes" checked/>
+                    <label for="agreeM"><p id="agreepM">я согласен с политикой конфидециальости</p></label>
+                </div>
+                <div class="form-row">
+                    <input value="ЗАФИКСИРОВАТЬ СКИДКУ НА КОМПЛЕКТ AROBOX" id="modalButton" class="modalButton1"  type="submit" >
+                </div>
+            </form>
+
+        </div>
+
     </div>
 </nav>

@@ -62,13 +62,13 @@ let updateText = (textEl, timeout, timeoutInterval, hideTimeout) => {
             span.style['animation-delay'] = `0s`;
             span.style['animation-duration'] = `500ms`;
             span.style['animation-fill-mode'] = `forwards`;
-        }, timeout + i*timeoutInterval);
+        }, timeout + i * timeoutInterval);
         setTimeout(() => {
             span.style['animation-name'] = `letterHide`;
             span.style['animation-delay'] = `0s`;
             span.style['animation-duration'] = `500ms`;
             span.style['animation-fill-mode'] = `forwards`;
-        }, hideTimeout + i*timeoutInterval)
+        }, hideTimeout + i * timeoutInterval)
     })
 }
 
@@ -84,7 +84,7 @@ let swiperParams = {
     preloadImages: true,
     updateOnImagesReady: true,
     effect: 'fade',
-    autoplay:{
+    autoplay: {
         delay: 5000,
         disableOnInteraction: false,
     },
@@ -92,10 +92,10 @@ let swiperParams = {
         crossFade: true
     },
     on: {
-        init: function(){
+        init: function () {
             this.autoplay.stop();
         },
-        imagesReady: function(){
+        imagesReady: function () {
             this.el.classList.remove('loading');
             this.autoplay.start();
         },
@@ -156,7 +156,7 @@ initText(sliderEl, titleEl, subTitleEl);
 
 let indexSwiper = new Swiper(sliderEl, swiperParams);
 
-(function x(){
+(function x() {
     document.querySelector(".main-menu").classList.add('fixed-menu-transparent-bg')
 })();
 
@@ -169,5 +169,105 @@ document.addEventListener(`scroll`, function () {
         mainMenuIndex.classList.remove(`fixed-menu-transparent-bg`)
     } else {
         mainMenuIndex.classList.add(`fixed-menu-transparent-bg`)
+    }
+})
+$('.closeGreen').click(function () {
+    $(".wrapper").css("display", "none");
+    setCookie("sign-x", "showed", 1)
+})
+
+$('.close').click(function () {
+    $(".modalCombo").css("display", "none")
+    $(".main-menu").css("z-index", "20")
+    $(".index__slider").css("z-index", "2")
+    $(".index__static").css("z-index", "2")
+})
+$('.greenDiv').click(function () {
+    $(".modalCombo").css("display", "flex")
+    $(".main-menu").css("z-index", "0")
+    $(".index__slider").css("z-index", "-2")
+    $(".index__static").css("z-index", "-2")
+
+})
+
+$('.closeGreenMobile').click(function () {
+    $(".greenDivWrapperMobile").css("display", "none")
+})
+
+$('#greenMenuItem').click(function () {
+    $(".modalComboMobile").css("display", "flex");
+    $(".index__video-mobile-btn").css("display", "none")
+    $(".main-menu__wrapper--mob-active").css("display", "none")
+})
+
+
+$('.closeMobile').click(function () {
+    $(".modalComboMobile").css("display", "none")
+    $(".index__video-mobile-btn").css("display", "flex")
+    $(".main-menu__wrapper--mob-active").css("display", "flex")
+})
+
+$('.phone-field').inputmask("+7(999)999-9999");
+
+jQuery.validator.addMethod("checkMaskPhone", function (value, element) {
+    return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
+});
+
+lottie.loadAnimation({
+    container: document.getElementById('greenCircle'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../js/green.json'
+});
+
+const mediaQuery = window.matchMedia('(min-width: 768px)')
+if (mediaQuery.matches) {
+    setTimeout(function () {
+        if (!!getCookie("sign-x")) {
+            return
+        }
+        document.getElementById('greenWrapper').style.display = 'flex';
+        document.getElementById('greenWrapper').style.opacity = 1;
+    }, 3000);
+}
+
+$('#modalButton').click(function () {
+    $(".modalCombo").css("display", "none");
+    $(".modalComboMobile").css("display", "none");
+
+})
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+$('#agree').on('click', function () {
+    if ( $(this).is(':checked') ) {
+    } else {
+        $("#formDeks :input").prop('readonly', true);
+    }
+})
+$('#agreeM').on('click', function () {
+    if ( $(this).is(':checked') ) {
+    } else {
+        $("#formDeksM :input").prop('readonly', true);
     }
 })
