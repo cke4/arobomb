@@ -522,27 +522,32 @@
   @include media("<tablet")
          bottom: 25%
 
-
+@media only screen and (device-width : 375px) and (device-height : 667px) and (-webkit-device-pixel-ratio : 2)
+  .ComboMobileWrap
+    .modalRightUp
+      bottom: 25%;
 
 .modalLeftNewPrice
-  font-weight: 900
-  height: 50px
-  font-size: 35px
-  line-height: 20px
   display: flex
   align-items: center
-  background: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%)
-  -webkit-mask-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%)
-  -webkit-background-clip: text
-  -webkit-text-fill-color: transparent
-
-
-
   @include media("<tablet")
-    background: linear-gradient(90deg, #FFF 0%, #FFF 100%)
+    margin-left: 35px
+  span
+    font-weight: 900
+    height: 50px
+    font-size: 35px
+    line-height: 20px
+    display: inline-block;
+    padding-top: 10px;
+    align-items: center
+    background: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%)
+    -webkit-mask-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%)
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
-    margin-left: 35px
+    @include media("<tablet")
+      background: linear-gradient(90deg, #FFF 0%, #FFF 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
 
 
 .modalLeftForm

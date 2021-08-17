@@ -1987,22 +1987,35 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       background-size: 85%;
       bottom: 5%; } }
 
+@media only screen 
+and (device-width : 375px) 
+and (device-height : 667px) 
+and (-webkit-device-pixel-ratio : 2) {
+  .ComboMobileWrap .modalRightUp {
+    bottom: 25%; } }
+
 .modalLeftNewPrice {
+  display: flex;
+  align-items: center;
+}
+
+.modalLeftNewPrice span {
   font-weight: 900;
   height: 50px;
   font-size: 35px;
   line-height: 20px;
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  padding-top: 10px;
   background: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
   @media (max-width: 767px) {
     .modalLeftNewPrice {
+      margin-left: 35px; }
+    .modalLeftNewPrice span {
       background: linear-gradient(90deg, #FFF 0%, #FFF 100%);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-left: 35px; } }
+      -webkit-text-fill-color: transparent; } }
 
 .modalLeftForm {
   display: flex;
