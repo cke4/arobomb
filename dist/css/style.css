@@ -1529,10 +1529,9 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   z-index: 20;
   position: absolute;
   right: 140px;
-  top: 90px;
+  top: 105px;
   width: 25px;
-  height: 25px;
-  background: white; }
+  height: 25px; }
 
 .none {
   display: none; }
@@ -1604,11 +1603,10 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
 
 .modalCombo {
   z-index: 22;
-  width: 1440px;
-  right: 10%;
-  height: 900px;
+  width: 100%;
+  height: 100vh;
   position: absolute;
-  top: 0px;
+  top: 0;
   background: #F5F8FF;
   background-image: url("../img/png/iStock-918139308 3.png");
   background-position: right;
@@ -1804,7 +1802,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   color: #FFFFFF; }
 
 .wrapper {
-  opacity: 0;
+  display: none;
   position: absolute;
   right: 11%;
   top: 50px; }
@@ -1850,7 +1848,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   padding-top: 11px; }
 
 .modalSix {
-  background-image: url("../img/png/iStock-918139308 4.svg");
+  background-image: url("../img/png/iStock-918139308 4.png");
   background-position: center;
   background-repeat: no-repeat;
   width: 225px;
@@ -1882,11 +1880,11 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   margin-top: 50px; }
 
 .modalSixMobile {
-  background-image: url("../img/png/iStock-918139308 4.svg");
+  background-image: url("../img/png/iStock-918139308 4.png");
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100px;
+  height: 23vh;
   display: flex;
   background-size: 150%;
   z-index: 2; }
@@ -1987,35 +1985,33 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     .ComboMobileWrap {
       bottom: 25%; } }
 
-@media only screen 
-and (device-width : 375px) 
-and (device-height : 667px) 
-and (-webkit-device-pixel-ratio : 2) {
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
   .ComboMobileWrap .modalRightUp {
     bottom: 25%; } }
 
 .modalLeftNewPrice {
   display: flex;
-  align-items: center;
-}
-
-.modalLeftNewPrice span {
-  font-weight: 900;
-  height: 50px;
-  font-size: 35px;
-  line-height: 20px;
-  display: inline-block;
-  padding-top: 10px;
-  background: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  align-items: center; }
   @media (max-width: 767px) {
     .modalLeftNewPrice {
-      margin-left: 35px; }
-    .modalLeftNewPrice span {
-      background: linear-gradient(90deg, #FFF 0%, #FFF 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; } }
+      margin-left: 35px; } }
+  .modalLeftNewPrice span {
+    font-weight: 900;
+    height: 50px;
+    font-size: 35px;
+    line-height: 20px;
+    display: inline-block;
+    padding-top: 10px;
+    align-items: center;
+    background: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+    -webkit-mask-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+    @media (max-width: 767px) {
+      .modalLeftNewPrice span {
+        background: linear-gradient(90deg, #FFF 0%, #FFF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; } }
 
 .modalLeftForm {
   display: flex;
@@ -2123,11 +2119,6 @@ and (-webkit-device-pixel-ratio : 2) {
       margin-left: -10px; } }
 
 @media (min-height: 750px) and (max-height: 800px) {
-  .modalCombo {
-    height: 663px;
-    zoom: 84%;
-    right: 0%;
-    width: 100%; }
   .modalLeft {
     margin-top: 1%; }
   .modalRightUp {
@@ -2139,10 +2130,6 @@ and (-webkit-device-pixel-ratio : 2) {
     right: 15%; } }
 
 @media (min-height: 601px) and (max-height: 700px) {
-  .modalCombo {
-    height: 763px;
-    width: 100%;
-    zoom: 85%; }
   .modalLeft {
     margin-top: 4%; }
   .modalLeftForm {
@@ -2161,9 +2148,6 @@ and (-webkit-device-pixel-ratio : 2) {
     background-size: 85%; } }
 
 @media (min-height: 770px) and (max-height: 860px) {
-  .modalCombo {
-    height: 763px;
-    width: 100%; }
   .modalLeft {
     margin-top: 4%; }
   .modalLeftForm {
@@ -2196,35 +2180,22 @@ and (-webkit-device-pixel-ratio : 2) {
     background-position-y: 0%; } }
 
 @media (min-width: 1000px) and (max-width: 1399px) {
-  .modalCombo {
-    zoom: 88%;
-    right: 0%; }
   .wrapper {
     right: 0%; } }
 
 @media (min-width: 1400px) and (max-width: 1499px) {
-  .modalCombo {
-    right: 0%; }
   .wrapper {
     right: 0%; } }
 
 @media (min-width: 1500px) and (max-width: 1840px) {
-  .modalCombo {
-    right: 5%; }
   .wrapper {
     right: 3%; } }
-
-@media (min-width: 820px) and (max-width: 999px) {
-  .modalCombo {
-    zoom: 68%; } }
 
 @media (min-height: 1020px) and (max-height: 1025px) {
   .modalLeft {
     width: 47%; }
   .modalRight {
     width: 53%; }
-  .modalCombo {
-    zoom: 68%; }
   .wrapper {
     right: -70px; } }
 
